@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="ProyectoCineReserva"
+                   namespace="ProyectoCineReserva.Models"
+                   default-lazy="false">
+  <class name="Cine" table="CINE">
+    <id name="idCine" access="property" column="idCine">
+      <generator class="native" />
+    </id>
+    <property name="Nombre" column="Nombre" />
+    <property name="Provincia" column="Provincia"/>
+    <property name="Direccion" column="Direccion"/>
+    <property name="Aforo" column="Aforo" />
+    <property name="nroSalas" column="nroSalas"/>
+  </class>
+</hibernate-mapping>

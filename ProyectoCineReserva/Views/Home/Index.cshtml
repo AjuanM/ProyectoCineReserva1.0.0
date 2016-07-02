@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProyectoCineReserva.Models.Pelicula>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">  
+
+    @foreach (var item in Model)
+    {
+
+
+        <div class="col-sm-4">
+            <p class="text-center"><strong>Name</strong></p><br>
+            <a href="/Home/DetallePelicula?id=@item.idPelicula">
+                @{ var imagen = string.Empty;
+                 if (item.Imagen != null)
+                 {
+                     var base64 = Convert.ToBase64String(item.Imagen);
+                     imagen = string.Format("data:image/jpg;base64,{0}", base64);
+                 }
+                }
+
+
+                <img src="@imagen" class="person" alt="Random Name" width="255" height="500">
+            </a>
+        </div>
+
+
+    }
+</div>
+
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="ProyectoCineReserva"
+                   namespace="ProyectoCineReserva.Models"
+                   default-lazy="false">
+  <class name="Butaca" table="Butaca">
+    <id name="idButaca" access="property" column="idButaca">
+      <generator class="native" />
+    </id>
+    <property name="estado" column="estado" />
+    <property name="nroButaca" column="nroButaca"/>
+    <many-to-one name="sala" column="idSala"/>
+  </class>
+</hibernate-mapping>

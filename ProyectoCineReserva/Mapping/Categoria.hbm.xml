@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="TiendaCarritoNH"
+                   namespace="TiendaCarritoNH.Models"
+                   default-lazy="false">
+  <class name="Categoria" table="Categoria">
+    <id name="Id" access="property" column="IdCategoria">
+      <generator class="native" />
+    </id>
+    <property name="Codigo" column="CodigoCategoria" />
+    <property name="Nombre" column="Nombre"/>
+    <property name="Observacion" column="Observacion"/>
+  </class>
+</hibernate-mapping>
